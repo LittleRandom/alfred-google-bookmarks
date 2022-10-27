@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>146E7962-FD60-4575-9730-5DF554D1F4DF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F5E3624A-522C-4F6B-83AF-AAE23D8454BF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>442DC5A3-2D46-40A4-9247-AC2A408E5B3B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>146E7962-FD60-4575-9730-5DF554D1F4DF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>65FBB9E8-38B0-47D2-A916-4D208F21B835</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>442DC5A3-2D46-40A4-9247-AC2A408E5B3B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F5E3624A-522C-4F6B-83AF-AAE23D8454BF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AEF7A75A-FCF9-4B53-A804-A25138C1D1E4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string></string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Google Bookmarks</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>cc</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Getting Bookmarks...</string>
+				<key>script</key>
+				<string>import chrome_bookmarks
+import json
+
+json_dict = {}
+data = []
+
+for folder in chrome_bookmarks.folders:
+    tmp_dict = {}
+    tmp_dict["uid"] = str(folder.name)
+    tmp_dict["title"] = str(folder.name)
+    tmp_dict["subtitle"] = str(folder.name)
+    tmp_dict["arg"] = str(folder.name)
+    data.append(tmp_dict)
+
+json_dict["items"] = data
+print(json.dumps(json_dict))</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>List of Google Bookmark Folders</string>
+				<key>title</key>
+				<string>Google Bookmarks</string>
+				<key>type</key>
+				<integer>9</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>442DC5A3-2D46-40A4-9247-AC2A408E5B3B</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>AEF7A75A-FCF9-4B53-A804-A25138C1D1E4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>loading...</string>
+				<key>script</key>
+				<string>import chrome_bookmarks
+import json
+import sys
+
+import os
+target_folder_name = os.environ['folder']
+
+json_dict = {}
+data = []
+
+for folder in chrome_bookmarks.folders:
+	if folder.name == target_folder_name:
+		for target_folder in folder.urls:
+			tmp_dict = {}
+			tmp_dict["uid"] = str(target_folder.name)
+			tmp_dict["title"] = str(target_folder.name)
+			tmp_dict["subtitle"] = str(target_folder.url)
+			tmp_dict["arg"] = str(target_folder.url)
+			data.append(tmp_dict)
+
+
+
+json_dict["items"] = data
+print(json.dumps(json_dict))</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Parsing thorugh {var:folder} in Google Bookmarks</string>
+				<key>title</key>
+				<string>{var:folder}</string>
+				<key>type</key>
+				<integer>9</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>F5E3624A-522C-4F6B-83AF-AAE23D8454BF</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>folder</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>146E7962-FD60-4575-9730-5DF554D1F4DF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>65FBB9E8-38B0-47D2-A916-4D208F21B835</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>146E7962-FD60-4575-9730-5DF554D1F4DF</key>
+		<dict>
+			<key>xpos</key>
+			<real>445</real>
+			<key>ypos</key>
+			<real>295</real>
+		</dict>
+		<key>442DC5A3-2D46-40A4-9247-AC2A408E5B3B</key>
+		<dict>
+			<key>xpos</key>
+			<real>190</real>
+			<key>ypos</key>
+			<real>265</real>
+		</dict>
+		<key>65FBB9E8-38B0-47D2-A916-4D208F21B835</key>
+		<dict>
+			<key>xpos</key>
+			<real>35</real>
+			<key>ypos</key>
+			<real>410</real>
+		</dict>
+		<key>AEF7A75A-FCF9-4B53-A804-A25138C1D1E4</key>
+		<dict>
+			<key>xpos</key>
+			<real>795</real>
+			<key>ypos</key>
+			<real>265</real>
+		</dict>
+		<key>F5E3624A-522C-4F6B-83AF-AAE23D8454BF</key>
+		<dict>
+			<key>xpos</key>
+			<real>535</real>
+			<key>ypos</key>
+			<real>265</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
