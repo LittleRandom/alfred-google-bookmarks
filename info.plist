@@ -60,9 +60,9 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>Quoc Vu</string>
 	<key>description</key>
-	<string></string>
+	<string>To search through google bookmarks</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -277,7 +277,9 @@ print(json.dumps(json_dict))</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Python Requirements:
+
+chrome_bookmarks</string>
 	<key>uidata</key>
 	<dict>
 		<key>146E7962-FD60-4575-9730-5DF554D1F4DF</key>
@@ -318,7 +320,11 @@ print(json.dumps(json_dict))</string>
 	</dict>
 	<key>userconfigurationconfig</key>
 	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.1</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/LittleRandom/alfred-google-bookmarks</string>
 </dict>
 </plist>
